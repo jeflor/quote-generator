@@ -871,6 +871,179 @@
             text-decoration: underline;
         }
 
+        /* ============ DEMO ============ */
+        .demo-section {
+            padding: 80px 0 100px;
+            background: #eae5da;
+        }
+
+        .demo-disclaimer {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--muted);
+            opacity: 0.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .demo-biz-name {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .demo-biz-location {
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .demo-biz-tagline {
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .demo-card {
+            max-width: 500px;
+            margin: 0 auto 24px;
+            background: #faf7f2;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            padding: 36px 32px;
+        }
+
+        .demo-form-group {
+            margin-bottom: 18px;
+        }
+
+        .demo-form-group label {
+            display: block;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--navy);
+            margin-bottom: 6px;
+        }
+
+        .demo-form-group select,
+        .demo-form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            color: var(--white);
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .demo-form-group select {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5a52' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+        }
+
+        .demo-form-group input::placeholder {
+            color: #aaa;
+        }
+
+        .demo-form-group input:focus,
+        .demo-form-group select:focus {
+            outline: none;
+            border-color: var(--amber);
+            box-shadow: 0 0 0 3px rgba(212, 114, 42, 0.15);
+        }
+
+        /* Result card */
+        .demo-result-label {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .demo-result-price {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .demo-result-breakdown {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .demo-result-note {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--muted);
+            font-style: italic;
+            opacity: 0.75;
+            margin-bottom: 8px;
+        }
+
+        .demo-divider {
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 28px 0;
+        }
+
+        .demo-lead-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Success state */
+        .demo-success-text {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .demo-success-subtext {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* Demo card show animation */
+        .demo-card-show {
+            animation: demoReveal 0.5s ease forwards;
+        }
+
+        @keyframes demoReveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* ============ RESPONSIVE ============ */
         @media (max-width: 600px) {
             .pricing-card {
@@ -1024,7 +1197,84 @@
             <h2 class="fade-in">See Exactly What Your Customers Would See</h2>
             <p class="fade-in">This is what your customer would see. Takes about 30 seconds to try.</p>
             <p class="fade-in" style="font-size: 1.1rem; opacity: 0.7; margin-top: -16px; margin-bottom: 28px;">This is a demo. Your version would use your pricing, your services, and your business name.</p>
-            <a href="#" class="btn btn-dark fade-in">View Demo App</a>
+            <a href="#demo" class="btn btn-dark fade-in">View Demo App</a>
+        </div>
+    </section>
+
+    <!-- ===== LIVE DEMO ===== -->
+    <section class="demo-section noise" id="demo">
+        <div class="container">
+            <p class="demo-disclaimer fade-in">Demo only. Your version would use your pricing, services, and business name.</p>
+            <div class="demo-header fade-in">
+                <h2 class="demo-biz-name">Greenfield Lawn Care</h2>
+                <p class="demo-biz-location">Austin, TX</p>
+                <p class="demo-biz-tagline">Get an instant quote for your lawn service</p>
+            </div>
+
+            <div class="demo-card fade-in" id="demoForm">
+                <div class="demo-form-group">
+                    <label for="lawnSize">Lawn Size</label>
+                    <select id="lawnSize">
+                        <option value="40">Small (under 2,000 sq ft)</option>
+                        <option value="60" selected>Medium (2,000–5,000 sq ft)</option>
+                        <option value="80">Large (5,000+ sq ft)</option>
+                    </select>
+                </div>
+                <div class="demo-form-group">
+                    <label for="serviceType">Service Type</label>
+                    <select id="serviceType">
+                        <option value="0">Basic Mow</option>
+                        <option value="10">Mow + Edge</option>
+                        <option value="20">Full Service</option>
+                    </select>
+                </div>
+                <div class="demo-form-group">
+                    <label for="frequency">Frequency</label>
+                    <select id="frequency">
+                        <option value="0">One-Time</option>
+                        <option value="10">Weekly (10% off)</option>
+                        <option value="0">Bi-Weekly</option>
+                    </select>
+                </div>
+                <div class="demo-form-group">
+                    <label for="demoName">Your Name <span style="font-weight: 400; opacity: 0.6;">(optional)</span></label>
+                    <input type="text" id="demoName" placeholder="e.g. Mike">
+                </div>
+                <button class="btn btn-amber" style="width: 100%; margin-top: 8px;" id="getPrice">Get My Price</button>
+            </div>
+
+            <!-- Quote Result -->
+            <div class="demo-card demo-result fade-in" id="demoResult" style="display: none;">
+                <p class="demo-result-label" id="resultLabel">Your estimated price:</p>
+                <p class="demo-result-price" id="resultPrice">$60</p>
+                <p class="demo-result-breakdown" id="resultBreakdown"></p>
+                <p class="demo-result-note">This is where your customer would see their quote and leave their contact info.</p>
+
+                <hr class="demo-divider">
+
+                <h3 class="demo-lead-title">Want to lock in this price?</h3>
+                <div class="demo-form-group">
+                    <label for="leadName">Name</label>
+                    <input type="text" id="leadName" placeholder="Your name">
+                </div>
+                <div class="demo-form-group">
+                    <label for="leadPhone">Phone</label>
+                    <input type="tel" id="leadPhone" placeholder="(512) 555-1234">
+                </div>
+                <div class="demo-form-group">
+                    <label for="leadEmail">Email</label>
+                    <input type="email" id="leadEmail" placeholder="you@email.com">
+                </div>
+                <button class="btn btn-dark" style="width: 100%; margin-top: 8px;" id="sendQuote">Send My Quote</button>
+            </div>
+
+            <!-- Success State -->
+            <div class="demo-card demo-success fade-in" id="demoSuccess" style="display: none;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><circle cx="12" cy="12" r="10"/><polyline points="16 10 11 15 8 12"/></svg>
+                <p class="demo-success-text">Thanks! This is where the lead would be saved and sent to the business owner.</p>
+                <p class="demo-success-subtext">The business owner would get a text or email with the customer's name, phone, email, and quoted price — instantly.</p>
+                <button class="btn btn-amber" style="width: 100%; margin-top: 20px;" id="resetDemo">Try Again</button>
+            </div>
         </div>
     </section>
 
@@ -1314,7 +1564,100 @@
             rootMargin: '0px 0px -40px 0px'
         });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-in').forEach(el => {
+            // Don't observe hidden demo elements — they animate via JS
+            if (el.id === 'demoResult' || el.id === 'demoSuccess') return;
+            observer.observe(el);
+        });
+
+        // Demo quote calculator
+        const getPrice = document.getElementById('getPrice');
+        const demoForm = document.getElementById('demoForm');
+        const demoResult = document.getElementById('demoResult');
+        const demoSuccess = document.getElementById('demoSuccess');
+        const resultPrice = document.getElementById('resultPrice');
+        const resultLabel = document.getElementById('resultLabel');
+        const resultBreakdown = document.getElementById('resultBreakdown');
+        const sendQuote = document.getElementById('sendQuote');
+        const resetDemo = document.getElementById('resetDemo');
+
+        getPrice.addEventListener('click', (e) => {
+            e.preventDefault();
+            const base = parseInt(document.getElementById('lawnSize').value);
+            const service = parseInt(document.getElementById('serviceType').value);
+            const freqSelect = document.getElementById('frequency');
+            const discount = parseInt(freqSelect.value);
+            const freqText = freqSelect.options[freqSelect.selectedIndex].text;
+            const name = document.getElementById('demoName').value.trim();
+
+            let total = base + service;
+            let breakdownParts = [];
+
+            const sizeLabel = document.getElementById('lawnSize').options[document.getElementById('lawnSize').selectedIndex].text;
+            const serviceLabel = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+            breakdownParts.push(sizeLabel.split('(')[0].trim() + ' lawn');
+            breakdownParts.push(serviceLabel);
+
+            if (discount > 0) {
+                const saved = Math.round(total * discount / 100);
+                total = total - saved;
+                breakdownParts.push(freqText);
+            } else {
+                breakdownParts.push(freqText.split('(')[0].trim());
+            }
+
+            if (name) {
+                resultLabel.textContent = name + ', your estimated price:';
+            } else {
+                resultLabel.textContent = 'Your estimated price:';
+            }
+
+            resultPrice.textContent = '$' + total;
+            resultBreakdown.textContent = breakdownParts.join(' · ');
+
+            // Pre-fill lead name if provided
+            if (name) {
+                document.getElementById('leadName').value = name;
+            }
+
+            demoResult.style.display = 'block';
+            demoResult.classList.add('demo-card-show');
+
+            // Scroll to result
+            setTimeout(() => {
+                demoResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        });
+
+        sendQuote.addEventListener('click', (e) => {
+            e.preventDefault();
+            demoResult.style.display = 'none';
+            demoForm.style.display = 'none';
+            demoSuccess.style.display = 'block';
+            demoSuccess.classList.add('demo-card-show');
+
+            setTimeout(() => {
+                demoSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        });
+
+        resetDemo.addEventListener('click', (e) => {
+            e.preventDefault();
+            demoSuccess.style.display = 'none';
+            demoResult.style.display = 'none';
+            demoForm.style.display = 'block';
+            demoForm.classList.add('demo-card-show');
+
+            // Reset form
+            document.getElementById('demoName').value = '';
+            document.getElementById('leadName').value = '';
+            document.getElementById('leadPhone').value = '';
+            document.getElementById('leadEmail').value = '';
+
+            setTimeout(() => {
+                demoForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        });
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
